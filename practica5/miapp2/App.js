@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Image} from 'react-native';
 import {Saludo}from "./components/Saludo";
 import {Saludo2}from "./components/Saludo2";
 import {Perfil} from "./components/Perfil";
-//importamos un componate de imagen que es image
 
 
 //Zona2: Main/ zona donde van a ir los componetes
@@ -18,8 +17,12 @@ export default function App() {
 
       <Saludo2/>
           <Text>----------------------------------</Text>
-      <Perfil />
 
+
+
+  <Perfil nombre="Alberto" carrera="ISC" materia="Movil" cuatri="9"/>
+   <Text>----------------------------------</Text>
+    <Perfil nombre="Diana" carrera="LAGE" materia="NOCHE" cuatri="9"/>
 
       <StatusBar style="auto" />
     </View>
@@ -36,3 +39,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
