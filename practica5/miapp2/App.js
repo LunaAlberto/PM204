@@ -10,19 +10,12 @@ import {Perfil} from "./components/Perfil";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image source={require('./assets/wave.png')}/>
-      <Text>Hola mundo react native</Text>
-      <Text>----------------------------------</Text>
-            <Saludo> </Saludo>
 
-      <Saludo2/>
-          <Text>----------------------------------</Text>
-
-
-
-  <Perfil nombre="Alberto" carrera="ISC" materia="Movil" cuatri="9"/>
+  <Perfil style={styles.tarjetaVerde} nombre="Alberto" carrera="ISC" materia="Movil" cuatri="9"/>
    <Text>----------------------------------</Text>
-    <Perfil nombre="Diana" carrera="LAGE" materia="NOCHE" cuatri="9"/>
+    <Perfil style={styles.tarjetaRoja} nombre="Diana" carrera="LAGE" materia="NOCHE" cuatri="9"/>
+       <Text>----------------------------------</Text>
+    <Perfil style={styles.tarjetaRoja} nombre="Diana" carrera="LAGE" materia="NOCHE" cuatri="9"/>
 
       <StatusBar style="auto" />
     </View>
@@ -32,11 +25,20 @@ export default function App() {
 //Zona3: Estilos y posicionamiento de los componetes
 
 const styles = StyleSheet.create({
-  container: {
+container: {
     flex: 1,
     backgroundColor: 'rgb(255, 255, 255)',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'row', 
+    justifyContent: 'space-evenly', 
+    alignItems: 'center', 
   },
+  tarjetaVerde: {
+    backgroundColor: '#8bc48b',
+  },
+  tarjetaRoja: {
+    backgroundColor: '#b86e6e',
+  }
 });
+
+
 
