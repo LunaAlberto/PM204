@@ -1,9 +1,8 @@
 //Zona1: Importaciones componetes y archivos
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image} from 'react-native';
-import {Saludo}from "./components/Saludo";
-import {Saludo2}from "./components/Saludo2";
-import {Perfil} from "./components/Perfil";
+import MenuScreen from './screens/MenuScreen';
+
 
 
 //Zona2: Main/ zona donde van a ir los componetes
@@ -11,11 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-  <Perfil style={styles.tarjetaVerde} nombre="Alberto" carrera="ISC" materia="Movil" cuatri="9"/>
-   <Text>----------------------------------</Text>
-    <Perfil style={styles.tarjetaRoja} nombre="Diana" carrera="LAGE" materia="NOCHE" cuatri="9"/>
-       <Text>----------------------------------</Text>
-    <Perfil style={styles.tarjetaRoja} nombre="Diana" carrera="LAGE" materia="NOCHE" cuatri="9"/>
+      <MenuScreen></MenuScreen>
 
       <StatusBar style="auto" />
     </View>
@@ -31,12 +26,6 @@ container: {
     flexDirection: 'row', 
     justifyContent: 'space-evenly', 
     alignItems: 'center', 
-  },
-  tarjetaVerde: {
-    backgroundColor: '#8bc48b',
-  },
-  tarjetaRoja: {
-    backgroundColor: '#b86e6e',
   }
 });
 
