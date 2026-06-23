@@ -21,7 +21,8 @@ export default function SafeAreaScreen() {
       )}
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.listaContenido} showsVerticalScrollIndicator={false}>
-        {['Comprar Pan', 'Estudiar React Native', 'Aprender importaciones', 'Llamar a alguien', 'Revisar un correo', 'Leer un libro', 'Practicar guitarra', 'Sacar a pasear al perro', 'Hacer la tarea'].map((tarea, i) => (
+        {['Comprar Pan', 'Estudiar React Native', 'Aprender importaciones', 'Llamar a alguien', 'Revisar un correo', 
+        'Leer un libro', 'Practicar guitarra', 'Sacar a pasear al perro', 'Hacer la tarea'].map((tarea, i) => (
           <View key={i} style={styles.tarjeta}>
             <Text style={styles.tarjetaTexto}>{tarea}</Text>
           </View>
