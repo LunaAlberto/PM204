@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import {StyleSheet, Text, View, Button, ImageBackground,Image} from 'react-native';
 
 export default function ImageBackgroundSplashScreen() {
+
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const imagenes = [
+    require('../assets/BP.jpg'),
+    require('../assets/foto.jpg'),
+    require('../assets/adaptive-icon.png'),
+  ];
+
   return (
-    <View style={styles.container}>
-      <Text> Aquí va la Práctica de ImageBackground & SplashScreen (Alberto Luna Rufino / Maria De Los Angeles Palma Torres) </Text>
-      <StatusBar style="auto"/>
-    </View>
+    <ImageBackground
+      source={imagenes[imageIndex]}
+      style={styles.contenedor}
+      imageStyle={styles.imagen}
+      blurRadius={5}
+    />
+  
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgb(255, 255, 255)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
