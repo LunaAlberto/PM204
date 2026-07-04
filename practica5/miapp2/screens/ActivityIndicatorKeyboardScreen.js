@@ -1,5 +1,3 @@
-// IMPORTACIONES
-
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text, TextInput, View, TouchableOpacity, ActivityIndicator, 
@@ -21,7 +19,6 @@ export default function ActivityIndicatorKeyboardScreen() {
   const [error, setError] = useState('');
   const [saliendo, setSaliendo] = useState(false);
 
-  // LOGIN
 
   const iniciarSesion = () => {
 
@@ -43,7 +40,7 @@ export default function ActivityIndicatorKeyboardScreen() {
     }, 1200);
   };
 
-  // LOGOUT
+
 
   const cerrarSesion = () => {
 
@@ -60,7 +57,7 @@ export default function ActivityIndicatorKeyboardScreen() {
     }, 1000);
   };
 
-  // PANTALLA LOGUEADO
+
   
 
   if (logueado) {
@@ -85,7 +82,7 @@ export default function ActivityIndicatorKeyboardScreen() {
     );
   }
 
-  // FORMULARIO
+
   return (
     <KeyboardAvoidingView
       style={styles.contenedor}
@@ -95,7 +92,7 @@ export default function ActivityIndicatorKeyboardScreen() {
       <ScrollView contentContainerStyle={styles.scrollContenido}>
 
         <Image
-          source={require('../assets/BP.jpg')}
+          source={require('../assets/foto.jpg')}
           style={styles.imagen}
         />
 
@@ -162,9 +159,6 @@ export default function ActivityIndicatorKeyboardScreen() {
     </KeyboardAvoidingView>
   );
 }
-
-
-// ESTILOS
 
 const styles = StyleSheet.create({
 
