@@ -1,0 +1,18 @@
+nos ayuda para poder crear un proyecto
+npx create-expo-app@latest miapp --template blank
+
+no olvides 
+
+npx expo install react-dom react-native-web
+
+instalar lo que se necesita para splash 
+
+npx expo install expo-splash-screen
+
+
+así se ejecuta 
+
+npx expo start --web
+
+npx expo start
+
