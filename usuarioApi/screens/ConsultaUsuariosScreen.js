@@ -1,5 +1,7 @@
-import {SafeAreaView,View,Text,FlatList,StyleSheet, } from 'react-native';
-import React,{useState, useEffect} from 'react';
+import {View,Text,FlatList,StyleSheet,Platform} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import React,{useState, useCallback} from 'react';
+import { useFocusEffect } from 'expo-router';
 
 export default function ConsultaUsuariosScreen() {
   
@@ -7,18 +9,24 @@ export default function ConsultaUsuariosScreen() {
 
   const obtenerUsuarios = async() => {
     try {
-      const respuesta = await fetch('http://localhost:5000/v1/usuarios/');
+      const url = Platform.OS === 'web' 
+        ? 'http://localhost:5000/v1/usuarios/' 
+        : 'http://192.168.1.9:5000/v1/usuarios/';
+      console.log("Petición a:", url);
+      const respuesta = await fetch(url);
       const datos = await respuesta.json();
       console.log("Respuesta API:", datos);
       setUsuarios(datos.usuarios);
     } catch(error){
-      console.error(error);
+      console.error("Error al obtener usuarios:", error);
     }
   }
 
-  useEffect(() => {
-    obtenerUsuarios();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      obtenerUsuarios();
+    }, [])
+  );
 
   const renderTarjeta = ({ item }) => (
     <View style={styles.card}>

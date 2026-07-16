@@ -13,9 +13,12 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "scheme": "usuarioapi",
       "supportsTablet": true
     },
+    "scheme": "usuarioapi",
     "android": {
+      "scheme": "usuarioapi",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
